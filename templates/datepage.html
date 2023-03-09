@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+this is a title
+{% endblock %}
+
+{% block content %}
+
+<h1>This is our date page</h1>
+
+<p>Welcome to our date page</p>
+<h3> The filter returns {{year}}</h3>
+{% for employees in article_list %}
+
+<h1>{{employees.author}}</h1>
+<h2>{{employees.title}}</h2>
+<h3>{{employees.description}}</h3>
+<h4>{{employees.pub_date}}</h4>
+
+{% endfor %}
+
+{% endblock %}

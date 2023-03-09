@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Upload and Transcribe</h1>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload and Transcribe</button>
+  </form>
+  <h2>Transcription:</h2>
+  <p>{{ transcription }}</p>
+{% endblock %}
