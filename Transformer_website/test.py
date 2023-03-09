@@ -8,7 +8,7 @@ def transcriber(file_path):
     # This folder should only have the mp4 files you wish to transcribe. NO OTHER FILES
     directory = os.path.dirname(file_path)
     minutes = 60
-    input_dir = '/tmp/'
+    input_dir = '/home/snick/Temp/'
 
     # iterate over files in that directory
     count = 0
@@ -62,7 +62,7 @@ def transcriber(file_path):
             classnumber = input("What is the number for the class? (MATH 1593, BIO 1224 Lecture/Lab, HUM 2113)")
             classnumber = foldername.replace(" ", "_")
             '''
-            input_dir = '/tmp/'
+            input_dir = '/home/snick/Temp/'
             output_dir = file_path
 
             # Create the output directories if they don't already exist
@@ -82,5 +82,5 @@ def transcriber(file_path):
                 return text
             
 
-file_path = '/tmp/230120_001_testing.mp3'
+file_path = '/home/snick/Temp/230120_001_testing.mp3'
 transcriber(file_path)
